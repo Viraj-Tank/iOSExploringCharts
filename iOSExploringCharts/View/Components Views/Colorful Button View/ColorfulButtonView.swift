@@ -3,8 +3,8 @@ import SwiftUI
 
 struct ColorfulButtonView: View {
     
+    @Binding var colors: [Color] // default colors - 7
     @State private var flip: Bool = false
-    @State var colors: [Color] // default colors - 7
     let dim: CGFloat // 180
     let offset: CGFloat // 10
     let action: () -> Void
@@ -63,7 +63,7 @@ struct ColorfulButtonView: View {
 struct ColorfulButtonView_Previews: PreviewProvider {
     static var previews: some View {
         ColorfulButtonView(
-            colors: Color.defaultColors,
+            colors: .constant(Color.defaultColors),
             dim: 180,
             offset: 10,
             action: {}
