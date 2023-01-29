@@ -3,7 +3,7 @@ import SwiftUI
 
 struct TestColorButtonView: View {
     
-    @State var colors: [Color]
+    @State var colors: [Color] = Color.defaultColors
     @State private var rotateBar: Bool = false
     @State private var tilt: CGFloat = 0.0
     let threshold: CGFloat = 30
@@ -68,8 +68,8 @@ struct TestColorButtonView: View {
                 ToolbarItem(placement: .bottomBar) {
                     ColorfulButtonView(
                         colors: $colors,
-                        dim: 70,
-                        offset: 10,
+                        dim: 90,
+                        offset: 5,
                         action: {
                             rotateBar.toggle()
                         }
@@ -89,7 +89,7 @@ struct BorderedRectangle: View {
     var body: some View {
         RoundedRectangle(cornerRadius: 5)
             .fill(color)
-            .frame(width: barWidth,height: height)
+            .frame(width: barWidth, height: height > 50 ? height : 0)
             .overlay(
                 RoundedRectangle(cornerRadius: 5)
                     .stroke(lineWidth: 0.7)
@@ -99,6 +99,6 @@ struct BorderedRectangle: View {
 
 struct TestColorButtonView_Previews: PreviewProvider {
     static var previews: some View {
-        TestColorButtonView(colors: Color.defaultColors)
+        TestColorButtonView()
     }
 }

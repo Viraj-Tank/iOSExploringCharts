@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		989629C22984025100AACAA2 /* iOSExploringChartsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989629C12984025100AACAA2 /* iOSExploringChartsApp.swift */; };
-		989629C42984025100AACAA2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989629C32984025100AACAA2 /* ContentView.swift */; };
 		989629C62984025200AACAA2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 989629C52984025200AACAA2 /* Assets.xcassets */; };
 		989629CA2984025200AACAA2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 989629C92984025200AACAA2 /* Preview Assets.xcassets */; };
 		989629D52984029D00AACAA2 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989629D42984029D00AACAA2 /* ColorExtension.swift */; };
@@ -21,7 +20,6 @@
 /* Begin PBXFileReference section */
 		989629BE2984025100AACAA2 /* iOSExploringCharts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSExploringCharts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		989629C12984025100AACAA2 /* iOSExploringChartsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSExploringChartsApp.swift; sourceTree = "<group>"; };
-		989629C32984025100AACAA2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		989629C52984025200AACAA2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		989629C72984025200AACAA2 /* iOSExploringCharts.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = iOSExploringCharts.entitlements; sourceTree = "<group>"; };
 		989629C92984025200AACAA2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -67,7 +65,6 @@
 				989629D12984026B00AACAA2 /* ViewModel */,
 				989629D02984026300AACAA2 /* View */,
 				989629C12984025100AACAA2 /* iOSExploringChartsApp.swift */,
-				989629C32984025100AACAA2 /* ContentView.swift */,
 				989629C52984025200AACAA2 /* Assets.xcassets */,
 				989629C72984025200AACAA2 /* iOSExploringCharts.entitlements */,
 				989629C82984025200AACAA2 /* Preview Content */,
@@ -207,7 +204,6 @@
 				989629D52984029D00AACAA2 /* ColorExtension.swift in Sources */,
 				989629DD2984038500AACAA2 /* ArcView.swift in Sources */,
 				989629DF298403A200AACAA2 /* TestColorButtonView.swift in Sources */,
-				989629C42984025100AACAA2 /* ContentView.swift in Sources */,
 				989629C22984025100AACAA2 /* iOSExploringChartsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
