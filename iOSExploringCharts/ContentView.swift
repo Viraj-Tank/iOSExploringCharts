@@ -6,6 +6,7 @@ struct ContentView: View {
     
     let min = 0.0
     let max = 400.0
+    @State var isLegendVisible: Bool = true
     
     var body: some View {
         VStack {
@@ -17,18 +18,18 @@ struct ContentView: View {
                     x: .value("Day", "Monday"),
                     y: .value("Sales", 200)
                 )
-                .annotation {
-                    Image(systemName: "figure.walk.circle.fill")
-                        .foregroundColor(.blueViolet)
-                        .fontWeight(.bold)
-                        .font(.title)
-                }
                 .foregroundStyle(by:.value("Day", "Mon1"))
                 
                 BarMark(
                     x: .value("Day", "Monday"),
                     y: .value("Sales", 100)
                 )
+                .annotation(position: .top) {
+                    Image(systemName: "figure.walk.circle.fill")
+                        .foregroundColor(.crimson)
+                        .fontWeight(.bold)
+                        .font(.title)
+                }
                 .foregroundStyle(by:.value("Day", "Mon2"))
                 
                 BarMark(
@@ -51,7 +52,7 @@ struct ContentView: View {
                     Circle()
                         .stroke(lineWidth: 3)
                 }
-                .foregroundStyle(by:.value("Day", "Wednes"))
+                .foregroundStyle(by:.value("Day", "Wed"))
                 
                 BarMark(
                     x: .value("Day","Thursday"),
@@ -60,7 +61,7 @@ struct ContentView: View {
                 .annotation {
                     Rectangle()
                 }
-                .foregroundStyle(by:.value("Day", "Thurs"))
+                .foregroundStyle(by:.value("Day", "Thu"))
                 
                 BarMark(
                     x: .value("Day","Friday"),
@@ -87,14 +88,27 @@ struct ContentView: View {
                 .foregroundStyle(by:.value("Day", "Satur"))
             }
             .chartYScale(domain: min...max)
-            .chartXAxis {  /// used to display the x axis parameters
+            .chartXAxis {   /// used to display the x axis parameters
                 AxisMarks(position: .top)
-            }
+            }   /// used to display the y axis parameters
             .chartYAxis {
                 AxisMarks(position: .leading)
             }
+            .chartLegend(isLegendVisible ? .visible : .hidden) // hide the text at bottom (.visible/.hidden)
+            .chartLegend(position: .top, alignment: .center, spacing: 16)
             .padding()
+            
+            Button(action: {
+                withAnimation {
+                    isLegendVisible.toggle()
+                }
+            }, label: {
+                Text("Toggle Legened")
+            })
+            
         }.padding()
+        
+        
     }
 }
 
