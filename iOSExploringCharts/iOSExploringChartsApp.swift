@@ -5,7 +5,7 @@ import SwiftUI
 struct iOSExploringChartsApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            BarChart()
         }
     }
 }

@@ -2,7 +2,7 @@
 import SwiftUI
 import Charts
 
-struct ContentView: View {
+struct BarChart: View {
     
     let min = 0.0
     let max = 400.0
@@ -114,6 +114,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        BarChart()
     }
 }
