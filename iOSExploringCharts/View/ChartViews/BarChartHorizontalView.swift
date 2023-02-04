@@ -5,6 +5,7 @@ import Charts
 struct BarChartHorizontalView: View {
     
     let dailySales: [DailySalesType]
+    let barColors: [Color]
     
     var body: some View {
         Chart {
@@ -15,7 +16,9 @@ struct BarChartHorizontalView: View {
                 )
                 .foregroundStyle(by:.value("Day", sale.day))
             }
-        }.padding()
+        }
+        .chartForegroundStyleScale(range:barColors)
+        .padding()
         Chart {
             ForEach(dailySales) { sale in
                 BarMark(
@@ -24,12 +27,14 @@ struct BarChartHorizontalView: View {
                 )
                 .foregroundStyle(by:.value("Day", sale.day))
             }
-        }.padding()
+        }
+        .chartForegroundStyleScale(range:barColors)
+        .padding()
     }
 }
 
 struct BarChartHorizontalView_Previews: PreviewProvider {
     static var previews: some View {
-        BarChartHorizontalView(dailySales: defaultDailySales)
+        BarChartHorizontalView(dailySales: defaultDailySales, barColors: defaultBarColors)
     }
 }

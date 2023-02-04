@@ -5,7 +5,11 @@ import SwiftUI
 struct iOSExploringChartsApp: App {
     var body: some Scene {
         WindowGroup {
-            BarChart()
+            MoreBarChart(
+                dailySales: defaultDailySales,
+                min: 0.0,
+                max: 700.0
+            )
         }
     }
 }

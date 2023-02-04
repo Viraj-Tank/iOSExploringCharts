@@ -26,7 +26,7 @@ struct MoreBarChart: View {
                 if(isVerticalChart) {
                     switch(chartType) {
                         case .bar :
-                            BarChartVerticalView(dailySales: defaultDailySales, barColors: defaultBarColors)
+                            BarChartVerticalView(dailySales: defaultDailySales, barColors: barColors)
                             
                         case .line :
                             LineChartVerticalView(dailySales: defaultDailySales)
@@ -37,7 +37,7 @@ struct MoreBarChart: View {
                 } else { // horizontal case
                     switch(chartType) {
                         case .bar :
-                            BarChartHorizontalView(dailySales: defaultDailySales)
+                        BarChartHorizontalView(dailySales: defaultDailySales,barColors:barColors)
                             
                         case .line :
                             LineChartHorizontalView(dailySales: defaultDailySales)
@@ -112,23 +112,24 @@ struct MoreBarChart: View {
                         chartType = .bar
                     }
                 }, label: {
-                    Text("BAR").padding()
+                    Text("Bar\nChart")
                 })
-                
+                Spacer()
                 Button(action: {
                     withAnimation {
                         chartType = .line
                     }
                 }, label: {
-                    Text("LINE").padding()
+                    Text("Line\nChart")
                 })
+                Spacer()
                 
                 Button(action: {
                     withAnimation {
                         chartType = .area
                     }
                 }, label: {
-                    Text("AREA").padding()
+                    Text("Area\nChart")
                 })
                 
                 Image(systemName: "chart.bar.fill").padding()

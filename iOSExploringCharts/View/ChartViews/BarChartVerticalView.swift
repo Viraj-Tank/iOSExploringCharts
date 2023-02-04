@@ -13,6 +13,7 @@ struct BarChartVerticalView: View {
                     x: .value("Day", sale.day),
                     y: .value("Sales", sale.sales)
                 )
+                .foregroundStyle(by: .value("Day", sale.day))
             }
         }.padding()
             .chartForegroundStyleScale(range:barColors)
