@@ -71,7 +71,9 @@ struct TestColorButtonView: View {
                         dim: 90,
                         offset: 5,
                         action: {
-                            rotateBar.toggle()
+                            withAnimation {
+                                rotateBar.toggle()
+                            }
                         }
                     )
                 }

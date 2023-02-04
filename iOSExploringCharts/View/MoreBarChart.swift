@@ -12,9 +12,9 @@ struct MoreBarChart: View {
     let dailySales: [DailySalesType]
     let min: Double
     let max: Double
-    let barColors: [Color]
     let xAxisMarkPosition: AxisMarkPosition = .bottom
     let yAxisMarkPosition: AxisMarkPosition = .leading
+    @State var barColors: [Color] = defaultBarColors
     @State var chartType: ChartType = .area
     @State private var isVerticalChart: Bool = true
     
@@ -23,7 +23,32 @@ struct MoreBarChart: View {
             Text("iOS 16 Charts!")
                 .font(.largeTitle)
             
-            Chart {
+                if(isVerticalChart) {
+                    switch(chartType) {
+                        case .bar :
+                            BarChartVerticalView(dailySales: defaultDailySales, barColors: defaultBarColors)
+                            
+                        case .line :
+                            LineChartVerticalView(dailySales: defaultDailySales)
+                            
+                        case .area :
+                            AreaChartVerticalView(dailySales: defaultDailySales)
+                    }
+                } else { // horizontal case
+                    switch(chartType) {
+                        case .bar :
+                            BarChartHorizontalView(dailySales: defaultDailySales)
+                            
+                        case .line :
+                            LineChartHorizontalView(dailySales: defaultDailySales)
+                            
+                        case .area :
+                            AreaChartHorizontalView(dailySales: defaultDailySales)
+                    }
+                }
+
+            
+            /* Chart {
                 ForEach(dailySales) { // you can use item in here or can also use $0 for the same as below
                     
                     if(isVerticalChart) {
@@ -70,14 +95,24 @@ struct MoreBarChart: View {
                         }
                     }
                 }
-            }
+            }*/
             HStack {
+                
+                ColorfulButtonView(
+                    colors: $barColors,
+                    dim: 32,
+                    offset: 5,
+                    action: {
+                        barColors = Color.randomColorsN(n: barColors.count)
+                    }
+                ).padding()
+                
                 Button(action: {
                     withAnimation {
                         chartType = .bar
                     }
                 }, label: {
-                    Text("Bar").padding()
+                    Text("BAR").padding()
                 })
                 
                 Button(action: {
@@ -85,7 +120,7 @@ struct MoreBarChart: View {
                         chartType = .line
                     }
                 }, label: {
-                    Text("Line").padding()
+                    Text("LINE").padding()
                 })
                 
                 Button(action: {
@@ -93,7 +128,7 @@ struct MoreBarChart: View {
                         chartType = .area
                     }
                 }, label: {
-                    Text("Area").padding()
+                    Text("AREA").padding()
                 })
                 
                 Image(systemName: "chart.bar.fill").padding()
@@ -113,8 +148,7 @@ struct MoreBarChart_Preview: PreviewProvider {
         MoreBarChart(
             dailySales: defaultDailySales,
             min: 0.0,
-            max: 700.0,
-            barColors: defaultBarColors
+            max: 700.0
         )
     }
 }

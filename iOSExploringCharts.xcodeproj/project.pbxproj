@@ -18,6 +18,12 @@
 		989629DF298403A200AACAA2 /* TestColorButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989629DE298403A200AACAA2 /* TestColorButtonView.swift */; };
 		989822702989DB0C00CFCF73 /* Chart Data File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9898226F2989DB0C00CFCF73 /* Chart Data File.swift */; };
 		989822722989DBD000CFCF73 /* MoreBarChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989822712989DBD000CFCF73 /* MoreBarChart.swift */; };
+		98F67AFE298DC60A0086BEA2 /* BarChartHorizontalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F67AFD298DC6090086BEA2 /* BarChartHorizontalView.swift */; };
+		98F67B00298DC6370086BEA2 /* LineChartHorizontalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F67AFF298DC6370086BEA2 /* LineChartHorizontalView.swift */; };
+		98F67B02298DC6490086BEA2 /* AreaChartHorizontalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F67B01298DC6490086BEA2 /* AreaChartHorizontalView.swift */; };
+		98F67B04298DC65E0086BEA2 /* BarChartVerticalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F67B03298DC65E0086BEA2 /* BarChartVerticalView.swift */; };
+		98F67B06298DC6750086BEA2 /* LineChartVerticalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F67B05298DC6750086BEA2 /* LineChartVerticalView.swift */; };
+		98F67B08298DC6810086BEA2 /* AreaChartVerticalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F67B07298DC6810086BEA2 /* AreaChartVerticalView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +40,12 @@
 		989629DE298403A200AACAA2 /* TestColorButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestColorButtonView.swift; sourceTree = "<group>"; };
 		9898226F2989DB0C00CFCF73 /* Chart Data File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Chart Data File.swift"; sourceTree = "<group>"; };
 		989822712989DBD000CFCF73 /* MoreBarChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreBarChart.swift; sourceTree = "<group>"; };
+		98F67AFD298DC6090086BEA2 /* BarChartHorizontalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarChartHorizontalView.swift; sourceTree = "<group>"; };
+		98F67AFF298DC6370086BEA2 /* LineChartHorizontalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineChartHorizontalView.swift; sourceTree = "<group>"; };
+		98F67B01298DC6490086BEA2 /* AreaChartHorizontalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaChartHorizontalView.swift; sourceTree = "<group>"; };
+		98F67B03298DC65E0086BEA2 /* BarChartVerticalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarChartVerticalView.swift; sourceTree = "<group>"; };
+		98F67B05298DC6750086BEA2 /* LineChartVerticalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineChartVerticalView.swift; sourceTree = "<group>"; };
+		98F67B07298DC6810086BEA2 /* AreaChartVerticalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaChartVerticalView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +101,7 @@
 		989629D02984026300AACAA2 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				98F67AFC298DC5F70086BEA2 /* ChartViews */,
 				98300D86298637E7001533E8 /* ExploreBarChart.swift */,
 				989822712989DBD000CFCF73 /* MoreBarChart.swift */,
 				989629D62984032000AACAA2 /* Components Views */,
@@ -136,6 +149,19 @@
 				989629DE298403A200AACAA2 /* TestColorButtonView.swift */,
 			);
 			path = "Colorful Button View";
+			sourceTree = "<group>";
+		};
+		98F67AFC298DC5F70086BEA2 /* ChartViews */ = {
+			isa = PBXGroup;
+			children = (
+				98F67AFD298DC6090086BEA2 /* BarChartHorizontalView.swift */,
+				98F67AFF298DC6370086BEA2 /* LineChartHorizontalView.swift */,
+				98F67B01298DC6490086BEA2 /* AreaChartHorizontalView.swift */,
+				98F67B03298DC65E0086BEA2 /* BarChartVerticalView.swift */,
+				98F67B05298DC6750086BEA2 /* LineChartVerticalView.swift */,
+				98F67B07298DC6810086BEA2 /* AreaChartVerticalView.swift */,
+			);
+			path = ChartViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -208,13 +234,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				98F67B04298DC65E0086BEA2 /* BarChartVerticalView.swift in Sources */,
 				989629D92984035500AACAA2 /* ColorfulButtonView.swift in Sources */,
 				989629DB2984037300AACAA2 /* RandomArcFromColorListView.swift in Sources */,
+				98F67B06298DC6750086BEA2 /* LineChartVerticalView.swift in Sources */,
+				98F67B08298DC6810086BEA2 /* AreaChartVerticalView.swift in Sources */,
 				98300D87298637E7001533E8 /* ExploreBarChart.swift in Sources */,
 				989629D52984029D00AACAA2 /* ColorExtension.swift in Sources */,
 				989822702989DB0C00CFCF73 /* Chart Data File.swift in Sources */,
 				989629DD2984038500AACAA2 /* ArcView.swift in Sources */,
+				98F67B00298DC6370086BEA2 /* LineChartHorizontalView.swift in Sources */,
 				989629DF298403A200AACAA2 /* TestColorButtonView.swift in Sources */,
+				98F67B02298DC6490086BEA2 /* AreaChartHorizontalView.swift in Sources */,
+				98F67AFE298DC60A0086BEA2 /* BarChartHorizontalView.swift in Sources */,
 				989629C22984025100AACAA2 /* iOSExploringChartsApp.swift in Sources */,
 				989822722989DBD000CFCF73 /* MoreBarChart.swift in Sources */,
 			);

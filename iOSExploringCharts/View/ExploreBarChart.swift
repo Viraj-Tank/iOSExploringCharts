@@ -13,17 +13,17 @@ struct BarChart: View {
             Text("iOS 16 Charts!")
                 .font(.largeTitle)
             Chart {
-                /// use annotation properties to anotate the particular barmark
+                
                 BarMark(
                     x: .value("Day", "Monday"),
                     y: .value("Sales", 200)
-                )
+                )   /// foreground to set color
                 .foregroundStyle(by:.value("Day", "Mon1"))
                 
                 BarMark(
                     x: .value("Day", "Monday"),
                     y: .value("Sales", 100)
-                )
+                ) /// use annotation properties to anotate the particular barmark
                 .annotation(position: .top) {
                     Image(systemName: "figure.walk.circle.fill")
                         .foregroundColor(.crimson)
